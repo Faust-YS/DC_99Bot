@@ -1,5 +1,8 @@
 const { REST, Routes } = require('discord.js');
 
+const { botToken } = require("./utils/config.js");
+
+
 const commands = [
   {
     name: 'ping',
@@ -7,7 +10,7 @@ const commands = [
   },
 ];
 
-const rest = new REST({ version: '10' }).setToken('MTExNzQ2NjEyMTE3MjQxODY5MQ.Gpa6fn.dXlepNKiLuCmLVNywWvmhk1BT99NMhrhphHEwA');
+const rest = new REST({ version: '10' }).setToken(botToken);
 
 (async () => {
   try {
