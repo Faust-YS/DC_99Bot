@@ -1,8 +1,9 @@
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits,ActivityType } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const { botToken } = require("./utils/config.js");
 
 client.on('ready', () => {
+    client.user.setActivity('99', { type: ActivityType.Playing });
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
