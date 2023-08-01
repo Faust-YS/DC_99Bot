@@ -6,6 +6,12 @@ const commands = [
     name: 'ping',
     description: 'Replies with Pong!',
   },
+  {
+    name: 'start',
+    description: 'Start a new game!',
+  },
+  
+
 ];
 
 const rest = new REST({ version: '10' }).setToken(botToken);
